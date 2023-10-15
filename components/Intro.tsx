@@ -1,10 +1,20 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/constants/motion";
 
 const Intro = () => {
   return (
     <div className="md:h-[700px] h-full md:mt-[90px] mt-[180px] mb-[90px] w-full max-w-[1540px] px-[20px] mx-auto flex md:flex-row flex-col items-center justify-between">
-      <div className="md:w-1/2 w-full">
-        <h2 className="font-semibold ss:text-[48px] xs:text-[32px] text-[28px] sm:leading-[75px] leading-[50px]">
+      <motion.div
+        variants={fadeIn("right", "spring", 0.2, 0.75)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.25 }}
+        className="md:w-1/2 w-full"
+      >
+        <h2 className="font-semibold ss:text-[48px] xs:text-[32px] text-[28px] sm:leading-[75px] leading-[40px]">
           Зарабатывайте и привлекайте новых клиентов
         </h2>
         <p className="mt-[15px] sm:text-[24px] text-[18px]">
@@ -24,17 +34,23 @@ const Intro = () => {
             Как это работает?
           </a>
         </div>
-      </div>
-      <div className="h-full flex items-center md:mt-[120px] mt-[20px]">
+      </motion.div>
+      <motion.div
+        variants={fadeIn("left", "spring", 0.2, 0.75)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.25 }}
+        className="h-full flex items-center md:mt-[120px] mt-[20px]"
+      >
         <Image
-          className="lg:w-[800px] lg:h-[700px] md:w-[700px] md:h-[700px]"
+          className="lg:w-[800px] lg:h-[700px] md:w-[600px] md:h-[600px]"
           src="/intro-right-side.svg"
           alt="Relationship image"
           width={800}
           height={700}
           priority
         />
-      </div>
+      </motion.div>
     </div>
   );
 };
