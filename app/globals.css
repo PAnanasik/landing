@@ -18,10 +18,35 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+@media screen and (max-width: 1440px) {
+  #intro-image {
+    width: 700px;
+    height: 700px;
+  }
+}
+
+#marquee-container {
+  overflow: hidden;
+}
+
+#marquee-line {
+  animation: moving-line 20s linear infinite alternate;
+  white-space: nowrap;
+}
+
+@keyframes moving-line {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#title {
+  font-size: 28px;
+  font-weight: 600;
 }
