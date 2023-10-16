@@ -1,15 +1,25 @@
+"use client";
 import { cardsText } from "@/constants";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/constants/motion";
 
 type AdvantagesCardProps = {
   image: string;
   title: string;
   text: string;
+  id: number;
 };
 
-const AdvantageCard = ({ image, title, text }: AdvantagesCardProps) => {
+const AdvantageCard = ({ image, title, text, id }: AdvantagesCardProps) => {
   return (
-    <div className="border-solid border-primary border-[1px] rounded-[30px] md:w-1/2 w-full min-h-[400px] border-opacity-[0.5]">
+    <motion.div
+      variants={fadeIn("right", "spring", 0.35 * id, 0.75)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.25 }}
+      className="border-solid border-primary border-[1px] rounded-[30px] md:w-1/2 w-full min-h-[400px] border-opacity-[0.5]"
+    >
       <div className="p-6">
         <Image
           src={image}
@@ -24,22 +34,35 @@ const AdvantageCard = ({ image, title, text }: AdvantagesCardProps) => {
           <p className="mt-[20px] text-[16px]">{text}</p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
 const Advantages = () => {
   return (
     <div className="mt-[90px] max-w-[1240px] mx-auto px-[20px]">
-      <h2 id="title" className="mb-[60px]">
+      <motion.h2
+        id="title"
+        className="mb-[60px]"
+        variants={fadeIn("right", "spring", 0, 1)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.25 }}
+      >
         Что вы получите?
-      </h2>
+      </motion.h2>
       <div className="flex md:flex-row flex-col gap-[30px] mb-[30px]">
-        {cardsText.map((card) => (
-          <AdvantageCard key={card.title} {...card} />
+        {cardsText.map((card, id) => (
+          <AdvantageCard key={card.title} id={id} {...card} />
         ))}
       </div>
-      <div className="border-solid border-primary border-[1px] rounded-[30px] w-full min-h-[300px] border-opacity-[0.5]">
+      <motion.div
+        className="border-solid border-primary border-[1px] rounded-[30px] w-full min-h-[300px] border-opacity-[0.5]"
+        variants={fadeIn("right", "spring", 0.2, 1)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.25 }}
+      >
         <div className="p-6 flex md:flex-row flex-col gap-[30px]">
           <Image
             className="bg-primary md:w-1/2 w-full h-[250px] rounded-[8px] bg-opacity-[0.2]"
@@ -56,13 +79,14 @@ const Advantages = () => {
             </p>
             <a
               href="#"
-              className="p-2 bg-primary rounded-[8px] font-medium text-[16px] max-w-[300px] w-full mt-[30px] flex justify-center"
+              className="p-2 bg-primary rounded-[8px] font-medium text-[16px] max-w-[300px] w-full mt-[30px] flex justify-center
+              ease duration-300 hover:bg-hover hover:font-semibold"
             >
               Хочу стать партнером!
             </a>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

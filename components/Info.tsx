@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const Info = () => {
   return (
     <div className="max-w-[1240px] w-full mx-auto px-[20px] flex items-center mt-[90px]">
@@ -28,7 +26,9 @@ const Info = () => {
           </div>
           <a
             href="#"
-            className="sm:p-4 p-2 bg-primary rounded-[8px] font-medium text-[16px] max-w-[300px] w-full sm:mt-[20px] mt-[30px] flex justify-center"
+            className="sm:p-4 p-2 bg-primary rounded-[8px] font-medium text-[16px] max-w-[300px] 
+            w-full sm:mt-[20px] mt-[30px] flex justify-center 
+            ease duration-300 hover:bg-hover hover:font-semibold"
           >
             Стать партнером
           </a>

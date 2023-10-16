@@ -9,9 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#2B6DEB",
-        background: "#070D15",
-        dark: "#091124",
+        primary: "#A8375B",
+        background: "#3F1E26",
+        dark: "#171314",
+        hover: "#B6345E",
       },
       screens: {
         xs: "480px",

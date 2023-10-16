@@ -1,32 +1,58 @@
+"use client";
 import { factsText } from "@/constants";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/constants/motion";
 
 type FactCardProps = {
   title: string;
   text: string;
+  id: number;
 };
 
-const FactCard = ({ title, text }: FactCardProps) => {
+const FactCard = ({ title, text, id }: FactCardProps) => {
   return (
-    <div className="w-full min-h-[300px] p-6 rounded-[20px] bg-primary bg-opacity-[0.2]">
-      <h2 className="md:text-[32px] text-[24px] font-medium text-primary">{title}</h2>
+    <motion.div
+      className="w-full min-h-[300px] p-6 rounded-[20px] bg-primary bg-opacity-[0.2]"
+      variants={fadeIn("right", "spring", 0.35 * id, 0.75)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.25 }}
+    >
+      <h2 className="md:text-[32px] text-[24px] font-medium text-primary">
+        {title}
+      </h2>
       <p className="mt-[20px] md:text-[24px] text-[18px]">{text}</p>
-    </div>
+    </motion.div>
   );
 };
 
 const Facts = () => {
   return (
     <div className="max-w-[1240px] mx-auto px-[20px] mt-[90px]">
-      <h2 id="title" className="mb-[60px]">
+      <motion.h2
+        id="title"
+        className="mb-[60px]"
+        variants={fadeIn("right", "spring", 0, 1)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.25 }}
+      >
         А вы знали?
-      </h2>
+      </motion.h2>
       <div className="flex sm:flex-row flex-col gap-[20px]">
-        {factsText.map((fact) => (
-          <FactCard key={fact.title} {...fact} />
+        {factsText.map((fact, id) => (
+          <FactCard key={fact.title} id={id} {...fact} />
         ))}
       </div>
-      <div className="w-full min-h-[300px] p-6 rounded-[20px] bg-primary bg-opacity-[0.2] mt-[30px] flex md:flex-row flex-col justify-between gap-[30px]">
+      <motion.div
+        className="w-full min-h-[300px] p-6 rounded-[20px] 
+      bg-primary bg-opacity-[0.2] mt-[30px] flex md:flex-row flex-col justify-between gap-[30px]"
+        variants={fadeIn("top", "spring", 0, 1)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.25 }}
+      >
         <Image
           className="bg-primary rounded-[8px] bg-opacity-[0.3] md:w-[800px] w-full h-[300px]"
           src="/RemontPlay-logo.svg"
@@ -35,19 +61,22 @@ const Facts = () => {
           height={350}
         />
         <div>
-          <h2 className="md:text-[32px] text-[24px] font-medium text-primary">Попробуйте!</h2>
+          <h2 className="md:text-[32px] text-[24px] font-medium text-primary">
+            Попробуйте!
+          </h2>
           <p className="mt-[20px] text-[16px]">
             У нас есть очень удобное приложение, с помощью которого вы сможете
             извлечь максимальную выгоду за кратчайший период
           </p>
           <a
             href="#"
-            className="p-2 bg-primary rounded-[8px] font-medium text-[16px] max-w-[300px] w-full mt-[30px] flex justify-center"
+            className="p-2 bg-primary rounded-[8px] font-medium text-[16px] max-w-[300px] w-full mt-[30px] flex justify-center
+            ease duration-300 hover:bg-hover hover:font-semibold"
           >
             Хочу попробовать!
           </a>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
