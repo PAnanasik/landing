@@ -8,6 +8,7 @@ import MoreAdvantages from "@/components-partner/MoreAdvantages";
 import Navbar from "@/components-partner/Navbar";
 import RunningString from "@/components-partner/RunningString";
 import Footer from "@/components-partner/Footer";
+import Map from "@/components-partner/Map";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <Community />
       <MoreAdvantages />
       <Info />
+      <Map />
       <Footer />
     </div>
   );
