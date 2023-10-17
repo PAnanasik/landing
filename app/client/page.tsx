@@ -1,9 +1,25 @@
-import React from 'react'
+import HowWorks from "@/components-client/HowWorks";
+import Intro from "@/components-client/Intro";
+import Navbar from "@/components-client/Navbar";
+import RunningString from "@/components-client/RunningString";
+import Partners from "@/components-client/Partners";
+import Staff from "@/components-client/Staff";
+import Faq from "@/components-client/Faq";
+import Footer from "@/components-client/Footer";
 
 const page = () => {
   return (
-    <div>клиенту</div>
-  )
-}
+    <div>
+      <Navbar />
+      <Intro />
+      <RunningString />
+      <HowWorks />
+      <Partners />
+      <Staff />
+      <Faq />
+      <Footer />
+    </div>
+  );
+};
 
-export default page
+export default page;

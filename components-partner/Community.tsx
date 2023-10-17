@@ -78,7 +78,7 @@ const Community = () => {
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
       >
-        <h2 className="font-semibold ss:text-[32px] text-[24px] leading-[50px] w-1/2">
+        <h2 className="font-semibold ss:text-[32px] text-[24px] leading-[50px] md:w-1/2 w-full">
           Remont Play - это не просто программа лояльности. Это{" "}
           <span className="text-primary">
             целое коммьюнити предпринимателей

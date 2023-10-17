@@ -17,6 +17,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
@@ -47,6 +51,12 @@ body {
   100% {
     transform: translateX(0);
   }
+}
+
+.hashspan {
+  margin-top: -200px;
+  padding-bottom: 200px;
+  display: block;
 }
 
 #title {
@@ -99,7 +109,7 @@ body {
   transition: 0.2s ease-in;
 }
 .toggle input[type="checkbox"]:checked + label:before {
-  background: #2B6DEB;
+  background: #2b6deb;
 }
 .toggle input[type="checkbox"]:checked + label:after {
   left: 27.5px;

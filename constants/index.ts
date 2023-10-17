@@ -45,6 +45,25 @@ export const stepsText = [
   },
 ];
 
+export const stepsTextClient = [
+  {
+    title: "1 шаг",
+    text: "Зарегистрируйтесь",
+  },
+  {
+    title: "2 шаг",
+    text: "Совершите покупку у магазина-партнера",
+  },
+  {
+    title: "3 шаг",
+    text: "Получите до 15% бонусов от покупки",
+  },
+  {
+    title: "4 шаг",
+    text: "Через 14 дней бонусы начислятся",
+  },
+];
+
 export const communityPluses = [
   {
     labelText: "Общий чат",
@@ -91,5 +110,76 @@ export const moreAdvantages = [
   {
     title: "Дополнительное размещение",
     text: "Баннеры на главной странице повысят видимость бренда и приведут к росту трафика на вашем сайте",
+  },
+];
+
+// client
+
+export const slidesArray = [
+  {
+    name: "freegaz1",
+    desc: "freeeee gaaaaaaz",
+  },
+  {
+    name: "freegaz2",
+    desc: "freeeee gaaaaaaz",
+  },
+  {
+    name: "freegaz3",
+    desc: "freeeee gaaaaaaz",
+  },
+  {
+    name: "freegaz4",
+    desc: "freeeee gaaaaaaz",
+  },
+  {
+    name: "freegaz5",
+    desc: "freeeee gaaaaaaz",
+  },
+  {
+    name: "freegaz6",
+    desc: "freeeee gaaaaaaz",
+  },
+  {
+    name: "freegaz7",
+    desc: "freeeee gaaaaaaz",
+  },
+];
+
+export const staffArray = [
+  {
+    name: "Ваня цветочкин",
+    prof: "Программист",
+    desc: "Ну там туда сюда",
+  },
+  {
+    name: "freegaz2",
+    prof: "freeeee gaaaaaaz",
+    desc: "Ну там туда сюда",
+  },
+  {
+    name: "freegaz3",
+    prof: "freeeee gaaaaaaz",
+    desc: "Ну там туда сюда",
+  },
+  {
+    name: "freegaz4",
+    prof: "freeeee gaaaaaaz",
+    desc: "Ну там туда сюда",
+  },
+  {
+    name: "freegaz5",
+    prof: "freeeee gaaaaaaz",
+    desc: "Ну там туда сюда",
+  },
+  {
+    name: "freegaz6",
+    prof: "freeeee gaaaaaaz",
+    desc: "Ну там туда сюда",
+  },
+  {
+    name: "freegaz7",
+    prof: "freeeee gaaaaaaz",
+    desc: "Ну там туда сюда",
   },
 ];

@@ -1,5 +1,5 @@
 "use client";
-import { stepsText } from "@/constants";
+import { stepsTextClient } from "@/constants";
 import { fadeIn } from "@/constants/motion";
 import { motion } from "framer-motion";
 
@@ -20,6 +20,17 @@ const StepCard = ({ title, text, id }: StepCardProps) => {
     >
       <h2 className="text-[24px] text-primary font-medium">{title}</h2>
       <p className="text-[18px]">{text}</p>
+      {id === 0 && (
+        <a
+          href="#"
+          className="p-2 border-primary border-solid border-[1px] 
+         border-opacity-[0.5] text-primary rounded-[8px] font-medium text-[18px] w-full 
+         flex justify-center ease duration-300
+         hover:bg-primary hover:bg-opacity-[0.3] mt-[30px]"
+        >
+          Подробнее
+        </a>
+      )}
     </motion.div>
   );
 };
@@ -37,8 +48,8 @@ const HowWorks = () => {
       >
         Как это работает?
       </motion.h2>
-      <div className="flex sm:flex-row flex-col gap-[10px]">
-        {stepsText.map((step, id) => (
+      <div className="flex md:flex-row flex-col gap-[20px]">
+        {stepsTextClient.map((step, id) => (
           <StepCard key={step.title} id={id} {...step} />
         ))}
       </div>

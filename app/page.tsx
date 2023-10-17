@@ -1,13 +1,13 @@
-import Advantages from "@/components/Advantages";
-import Community from "@/components/Community";
-import Facts from "@/components/Facts";
-import HowWorks from "@/components/HowWorks";
-import Info from "@/components/Info";
-import Intro from "@/components/Intro";
-import MoreAdvantages from "@/components/MoreAdvantages";
-import Navbar from "@/components/Navbar";
-import RunningString from "@/components/RunningString";
-import Footer from "@/components/Footer";
+import Advantages from "@/components-partner/Advantages";
+import Community from "@/components-partner/Community";
+import Facts from "@/components-partner/Facts";
+import HowWorks from "@/components-partner/HowWorks";
+import Info from "@/components-partner/Info";
+import Intro from "@/components-partner/Intro";
+import MoreAdvantages from "@/components-partner/MoreAdvantages";
+import Navbar from "@/components-partner/Navbar";
+import RunningString from "@/components-partner/RunningString";
+import Footer from "@/components-partner/Footer";
 
 export default function Home() {
   return (
