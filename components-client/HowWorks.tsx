@@ -13,7 +13,7 @@ const StepCard = ({ title, text, id }: StepCardProps) => {
   return (
     <motion.div
       className="bg-primary bg-opacity-[0.2] w-full min-h-[200px] p-8 rounded-[20px]"
-      variants={fadeIn("right", "spring", 0.35 * id, 0.75)}
+      variants={fadeIn("right", "spring", 0.2 * id, 1)}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}

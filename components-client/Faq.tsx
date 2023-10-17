@@ -9,8 +9,18 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { useEffect, useState } from "react";
 
 const Faq = () => {
+  const [matches, setMatches] = useState(
+    window.matchMedia("(min-width: 768px)").matches
+  );
+
+  useEffect(() => {
+    window
+      .matchMedia("(min-width: 768px)")
+      .addEventListener("change", (event) => setMatches(event.matches));
+  }, []);
   return (
     <div className="max-w-[1240px] w-full mx-auto mt-[90px] px-[20px]">
       <motion.h2
@@ -23,6 +33,7 @@ const Faq = () => {
       >
         Отвечаем на ваши вопросы
       </motion.h2>
+      <div className="hashspan" id="howcashback"></div>
       <motion.div
         className="flex md:flex-row flex-col gap-[20px]"
         variants={fadeIn("right", "spring", 0, 1)}
@@ -34,11 +45,11 @@ const Faq = () => {
           modules={[Navigation, Pagination]}
           spaceBetween={20}
           slidesPerView={1}
-          navigation
+          navigation={matches ? true : false}
           pagination={{ clickable: true }}
           className="sm:h-[600px] h-full w-full flex justify-center"
         >
-          <SwiperSlide className="bg-primary bg-opacity-[0.2] rounded-[30px] relative sm:p-12 p-4 w-full">
+          <SwiperSlide className="bg-primary bg-opacity-[0.2] rounded-[30px] relative sm:p-12 p-4 w-full min-h-[700px]">
             <div className="sm:h-[255px] h-full">
               <div className="bg-client flex w-full min-h-[40px] p-4 items-center justify-start rounded-t-[8px] rounded-r-[8px] sm:max-w-[470px]">
                 <p className="">
@@ -57,9 +68,9 @@ const Faq = () => {
                 </p>
               </div>
             </div>
-            <div className="sm:h-[255px] sm:mt-0 mt-[30px] h-full">
-              <div className="bg-client flex w-full min-h-[40px] p-4 items-center justify-start rounded-t-[8px] rounded-r-[8px] sm:max-w-[230px]">
-                <p className="">Как получить кэшбек?</p>
+            <div className="sm:h-[255px] sm:mt-0 my-[30px] h-full">
+              <div className="bg-client flex w-full min-h-[40px] p-4 items-center justify-start rounded-t-[8px] rounded-r-[8px] sm:max-w-[300px]">
+                <p className="">Как и где получить кэшбек?</p>
               </div>
               <div
                 className="bg-primary flex w-full p-4 items-center rounded-t-[8px] rounded-l-[8px] sm:max-w-[500px] mt-[30px] min-h-[40px]
@@ -82,7 +93,7 @@ const Faq = () => {
               </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide className="bg-primary bg-opacity-[0.2] rounded-[30px] relative sm:p-12 p-4 w-full">
+          <SwiperSlide className="bg-primary bg-opacity-[0.2] rounded-[30px] relative sm:p-12 p-4 w-full min-h-[700px]">
             <div className="sm:h-[205px] h-full">
               <div className="bg-client flex w-full min-h-[40px] p-4 items-center justify-start rounded-t-[8px] rounded-r-[8px] sm:max-w-[440px]">
                 <p className="">Почему магазин платит кэшбек? Где подвох?</p>
@@ -99,7 +110,7 @@ const Faq = () => {
                 </p>
               </div>
             </div>
-            <div className="sm:h-[255px] sm:mt-0 mt-[30px] h-full">
+            <div className="sm:h-[255px] sm:mt-0 my-[30px] h-full">
               <div className="bg-client flex w-full min-h-[40px] p-4 items-center justify-start rounded-t-[8px] rounded-r-[8px] sm:max-w-[270px]">
                 <p className="">Как тратить кэшбек?</p>
               </div>
@@ -111,7 +122,7 @@ const Faq = () => {
               </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide className="bg-primary bg-opacity-[0.2] rounded-[30px] relative sm:p-12 p-4 w-full">
+          <SwiperSlide className="bg-primary bg-opacity-[0.2] rounded-[30px] relative sm:p-12 p-4 w-full min-h-[700px]">
             <div className="sm:h-[205px] h-full">
               <div className="bg-client flex w-full min-h-[40px] p-4 items-center justify-start rounded-t-[8px] rounded-r-[8px] sm:max-w-[200px]">
                 <p className="">Сколько я получу?</p>
@@ -126,7 +137,7 @@ const Faq = () => {
                 </p>
               </div>
             </div>
-            <div className="sm:h-[255px] sm:mt-0 mt-[30px] h-full">
+            <div className="sm:h-[255px] sm:mt-0 my-[30px] h-full">
               <div className="bg-client flex w-full min-h-[40px] p-4 items-center justify-start rounded-t-[8px] rounded-r-[8px] sm:max-w-[300px]">
                 <p className="">Думаю, мне стоит попробовать</p>
               </div>

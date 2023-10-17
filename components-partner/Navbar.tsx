@@ -44,12 +44,23 @@ const Navbar = () => {
           <NavLink text={"Клиенту"} href={"/client"} isActive={false} />
           <NavLink text={"Партнеру"} href={"/"} isActive={true} />
         </div>
-        <p className="font-medium sm:flex hidden">+7 928 883 77 83</p>
+        <a className="font-medium sm:flex hidden" href="#">
+          +7 928 883 77 83
+        </a>
         <div className="absolute sm:hidden flex right-[25px] top-[95px]">
-          <div className={`sm:hidden ${active ? 'flex' : 'hidden'} flex-col gap-[20px] bg-dark p-4 rounded-[20px] items-center`}>
+          <div
+            className={`sm:hidden ${
+              active ? "flex" : "hidden"
+            } flex-col gap-[20px] bg-dark p-4 rounded-[20px] items-center`}
+          >
             <NavLink text={"Клиенту"} href={"/client"} isActive={false} />
             <NavLink text={"Партнеру"} href={"/"} isActive={true} />
-            <p className={`font-medium sm:hidden ${active ? 'flex' : 'hidden'}`}>+7 928 883 77 83</p>
+            <a
+              className={`font-medium sm:hidden ${active ? "flex" : "hidden"}`}
+              href="#"
+            >
+              +7 928 883 77 83
+            </a>
           </div>
         </div>
         <Image

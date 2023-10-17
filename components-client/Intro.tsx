@@ -33,7 +33,7 @@ const Intro = () => {
             Участвовать
           </a>
           <a
-            href="#"
+            href="#howcashback"
             className="sm:p-4 p-2 border-primary border-solid border-[1px] 
             border-opacity-[0.5] text-primary rounded-[8px] font-medium text-[18px] w-full 
             flex justify-center ease duration-300
