@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/constants/motion";
+import Script from "next/script";
 
 const Map = () => {
   return (
@@ -15,7 +16,12 @@ const Map = () => {
       >
         Мы на карте
       </motion.h2>
-      <div className="w-full bg-white h-full"></div>
+      <div className="w-full h-[600px]" id="mymap">
+        <Script
+          type="text/javascript"
+          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Adf0279fbe7f81cff691291207df7d554b3e65daa48b6459655ec8899679b7d9f&amp;width=100%25&amp;id=mymap&amp;height=600&amp;lang=ru_RU&amp;scroll=true"
+        />
+      </div>
     </section>
   );
 };
