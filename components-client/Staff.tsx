@@ -22,7 +22,7 @@ const StaffCard = ({ name, prof, desc, id }: StaffCardProps) => {
     >
       <div className="bg-black bg-opacity-[0.3] rounded-[20px] h-[300px] w-full relative">
         <Image
-          className="bg-opacity-[0.3] absolute h-full object-cover rounded-t-[20px] z-[-10] w-full"
+          className="bg-opacity-[0.3] absolute h-full object-cover rounded-[20px] z-[-10] w-full"
           src="/mnogoznaal.jpg"
           alt="community section image"
           width={700}
@@ -33,14 +33,14 @@ const StaffCard = ({ name, prof, desc, id }: StaffCardProps) => {
           <p className="text-gray-200">{prof}</p>
         </div>
       </div>
-      <p className="p-4 bg-primary bg-opacity-[0.2] rounded-b-[20px]">{desc}</p>
+      {/* <p className="p-4 bg-primary bg-opacity-[0.2] rounded-b-[20px]">{desc}</p> */}
     </motion.div>
   );
 };
 
 const Staff = () => {
   return (
-    <div className="max-w-[1240px] w-full mx-auto mt-[90px] px-[20px]">
+    <section className="max-w-[1240px] w-full mx-auto mt-[90px] px-[20px]">
       <motion.h2
         className="mb-[60px]"
         id="title"
@@ -56,7 +56,7 @@ const Staff = () => {
           <StaffCard key={staff.name} id={id} {...staff} />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

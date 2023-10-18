@@ -5,7 +5,7 @@ import { fadeIn } from "@/constants/motion";
 
 const Partners = () => {
   return (
-    <motion.div
+    <motion.section
       className="max-w-[1240px] w-full mx-auto px-[20px] flex flex-col mt-[90px]"
       variants={fadeIn("right", "spring", 0, 1)}
       initial="hidden"
@@ -32,7 +32,7 @@ const Partners = () => {
         Мы выбрали <span className="text-primary">лучшие</span> магазины для вас
       </motion.p>
       <Slider />
-    </motion.div>
+    </motion.section>
   );
 };
 

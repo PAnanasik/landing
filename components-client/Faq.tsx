@@ -3,10 +3,21 @@
 import { fadeIn } from "@/constants/motion";
 import { motion } from "framer-motion";
 import FaqSlider from "./FaqSlider";
+import { useEffect, useState } from "react";
 
 const Faq = () => {
+  const [matches, setMatches] = useState(
+    typeof window !== "undefined" &&
+      window.matchMedia("(min-width: 768px)").matches
+  );
+
+  useEffect(() => {
+    window
+      .matchMedia("(min-width: 768px)")
+      .addEventListener("change", (event) => setMatches(event.matches));
+  }, []);
   return (
-    <div className="max-w-[1240px] w-full mx-auto mt-[90px] px-[20px]">
+    <section className="max-w-[1240px] w-full mx-auto mt-[90px] px-[20px]">
       <motion.h2
         className="mb-[60px]"
         id="title"
@@ -27,7 +38,7 @@ const Faq = () => {
       >
         <FaqSlider />
       </motion.div>
-    </div>
+    </section>
   );
 };
 

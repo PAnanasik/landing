@@ -26,7 +26,7 @@ const StepCard = ({ title, text, id }: StepCardProps) => {
 
 const HowWorks = () => {
   return (
-    <div className="max-w-[1240px] w-full mx-auto mt-[90px] px-[20px]">
+    <section className="max-w-[1240px] w-full mx-auto mt-[90px] px-[20px]">
       <div className="hashspan" id="howworks"></div>
       <motion.h2
         className="mb-[60px]"
@@ -43,7 +43,7 @@ const HowWorks = () => {
           <StepCard key={step.title} id={id} {...step} />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -29,7 +29,7 @@ const FactCard = ({ title, text, id }: FactCardProps) => {
 
 const Facts = () => {
   return (
-    <div className="max-w-[1240px] mx-auto px-[20px] mt-[90px]">
+    <section className="max-w-[1240px] mx-auto px-[20px] mt-[90px]">
       <motion.h2
         id="title"
         className="mb-[60px]"
@@ -77,7 +77,7 @@ const Facts = () => {
           </a>
         </div>
       </motion.div>
-    </div>
+    </section>
   );
 };
 

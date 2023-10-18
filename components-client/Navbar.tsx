@@ -64,7 +64,7 @@ const Navbar = () => {
           </div>
         </div>
         <Image
-          className="bg-opacity-[0.3] sm:hidden flex"
+          className="bg-opacity-[0.3] sm:hidden flex w-[30px] h-[30px]"
           src="/menu.svg"
           alt="menu image"
           width={30}

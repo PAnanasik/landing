@@ -1,6 +1,6 @@
 const Info = () => {
   return (
-    <div className="max-w-[1240px] w-full mx-auto px-[20px] flex items-center mt-[90px]">
+    <section className="max-w-[1240px] w-full mx-auto px-[20px] flex items-center mt-[90px]">
       <div className="w-full flex gap-[10px] justify-between">
         <div>
           <h2 className="sm:text-[48px] text-[28px] font-medium mb-[20px]">
@@ -34,7 +34,7 @@ const Info = () => {
           </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

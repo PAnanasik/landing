@@ -11,7 +11,7 @@ const notFound = () => {
         className="border-primary border-solid border-[1px] 
          border-opacity-[0.5] text-primary rounded-[8px] font-medium text-[18px] w-full 
          flex justify-center ease duration-300
-         hover:bg-primary hover:bg-opacity-[0.3] mt-[60px] max-w-[500px]"
+         hover:bg-primary hover:bg-opacity-[0.3] mt-[30px] max-w-[500px]"
       >
         Вернуться назад
       </a>

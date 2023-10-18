@@ -7,6 +7,7 @@ import Staff from "@/components-client/Staff";
 import Faq from "@/components-client/Faq";
 import Footer from "@/components-client/Footer";
 import Map from "@/components-client/Map";
+import Advantages from "@/components-client/Advantages";
 
 const page = () => {
   return (
@@ -14,6 +15,7 @@ const page = () => {
       <Navbar />
       <Intro />
       <RunningString />
+      <Advantages />
       <HowWorks />
       <Partners />
       <Staff />

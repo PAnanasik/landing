@@ -4,7 +4,7 @@ import { fadeIn } from "@/constants/motion";
 
 const Map = () => {
   return (
-    <div className="w-full h-[600px]">
+    <section className="w-full h-[600px]">
       <motion.h2
         className="mb-[60px] max-w-[1240px] w-full mx-auto mt-[90px] px-[20px]"
         id="title"
@@ -16,7 +16,7 @@ const Map = () => {
         Мы на карте
       </motion.h2>
       <div className="w-full bg-white h-full"></div>
-    </div>
+    </section>
   );
 };
 

@@ -70,7 +70,7 @@ const Community = () => {
   };
 
   return (
-    <div className="max-w-[1240px] w-full px-[20px] mx-auto mt-[90px]">
+    <section className="max-w-[1240px] w-full px-[20px] mx-auto mt-[90px]">
       <motion.div
         className="flex flex-row justify-between h-full items-center"
         variants={fadeIn("right", "spring", 0.2, 1)}
@@ -97,7 +97,7 @@ const Community = () => {
           <CommunityCard key={item.labelText} id={id} {...item} />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

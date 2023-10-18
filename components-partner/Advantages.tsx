@@ -13,7 +13,7 @@ type AdvantagesCardProps = {
 
 const AdvantageCard = ({ image, title, text, id }: AdvantagesCardProps) => {
   return (
-    <motion.div
+    <motion.section
       variants={fadeIn("right", "spring", 0.35 * id, 0.75)}
       initial="hidden"
       whileInView="show"
@@ -34,7 +34,7 @@ const AdvantageCard = ({ image, title, text, id }: AdvantagesCardProps) => {
           <p className="mt-[20px] text-[16px]">{text}</p>
         </div>
       </div>
-    </motion.div>
+    </motion.section>
   );
 };
 

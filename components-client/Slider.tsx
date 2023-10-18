@@ -1,5 +1,5 @@
 "use client";
-import { Navigation } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -21,30 +21,26 @@ export const Slider = () => {
       .addEventListener("change", (event) => setMatches(event.matches));
   }, []);
   return (
-    <>
-      {typeof window !== "undefined" && (
-        <Swiper
-          modules={[Navigation]}
-          spaceBetween={20}
-          slidesPerView={matches ? 3 : 1}
-          loop
-          navigation
-          pagination={{ clickable: true }}
-          className="h-[300px] w-full flex justify-center"
+    <Swiper
+      modules={[Navigation, Pagination]}
+      spaceBetween={20}
+      slidesPerView={matches ? 3 : 1}
+      loop
+      navigation
+      pagination={{ clickable: true }}
+      className="h-[300px] w-full flex justify-center"
+    >
+      {slidesArray.map((slide, id) => (
+        <SwiperSlide
+          key={id}
+          className="bg-primary bg-opacity-[0.2] rounded-[30px] relative min-h-[300px]"
         >
-          {slidesArray.map((slide, id) => (
-            <SwiperSlide
-              key={id}
-              className="bg-primary bg-opacity-[0.2] rounded-[30px] relative"
-            >
-              <div className="bottom-[20px] left-[20px] absolute">
-                <h2 className="font-semibold text-[18px]">{slide.name}</h2>
-                <p className="">{slide.desc}</p>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      )}
-    </>
+          <div className="bottom-[25px] left-[20px] absolute">
+            <h2 className="font-semibold text-[18px]">{slide.name}</h2>
+            <p className="">{slide.desc}</p>
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 };

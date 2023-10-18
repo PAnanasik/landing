@@ -26,7 +26,7 @@ const MoreAdvantageCard = ({ title, text, id }: MoreAdvantageCardProps) => {
 
 const MoreAdvantages = () => {
   return (
-    <div className="max-w-[1240px] w-full mx-auto px-[20px] mt-[90px]">
+    <section className="max-w-[1240px] w-full mx-auto px-[20px] mt-[90px]">
       <motion.h2
         id="title"
         variants={fadeIn("right", "spring", 0, 1)}
@@ -41,7 +41,7 @@ const MoreAdvantages = () => {
           <MoreAdvantageCard key={advantage.title} id={id} {...advantage} />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
