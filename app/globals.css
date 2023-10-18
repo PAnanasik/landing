@@ -101,20 +101,20 @@ body {
 }
 
 .swiper-button-next {
-  color: #a8375b;
+  background: #a8375b;
 }
 .swiper-button-next::after {
-  color: #a8375b;
+  background: #a8375b;
 }
 .swiper-button-prev {
-  color: #a8375b;
+  background: #a8375b;
 }
 .swiper-button-prev::after {
-  color: #a8375b;
+  background: #a8375b;
 }
 
-.swiper-pagination-bullet {
-  color: #fff;
+.swiper-pagination-bullet-active {
+  background: #fff;
 }
 
 @media screen and (max-width: 768px) {
