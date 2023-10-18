@@ -28,9 +28,6 @@ const FaqSlider = () => {
       navigation
       pagination={{ clickable: true }}
       className="md:h-[600px] h-full w-full flex justify-center"
-      style={{
-        "--swiper-pagination-color": "#fff",
-      }}
     >
       <SwiperSlide className="bg-primary bg-opacity-[0.2] rounded-[30px] relative sm:p-12 p-4 w-full xs:min-h-[600px] min-h-[800px]">
         <div className="sm:h-[255px] sm:mt-0 my-[30px] h-full">

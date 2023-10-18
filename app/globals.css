@@ -108,19 +108,8 @@ body {
   color: #a8375b;
 }
 
-.swiper-pagination-bullet {
-  color: #fff;
-}
-
-.swiper-pagination-bullet::after {
-  color: #fff;
-}
-
 .swiper-pagination-bullet-active {
-  color: #fff;
-}
-.swiper-pagination-bullet-active::after {
-  color: #fff;
+  background-color: #fff !important;
 }
 
 @media screen and (max-width: 768px) {

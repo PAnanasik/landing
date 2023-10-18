@@ -29,9 +29,6 @@ export const Slider = () => {
       navigation
       pagination={{ clickable: true }}
       className="h-[300px] w-full flex justify-center"
-      style={{
-        "--swiper-pagination-color": "#fff",
-      }}
     >
       {slidesArray.map((slide, id) => (
         <SwiperSlide
