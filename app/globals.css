@@ -100,6 +100,23 @@ body {
   left: 27.5px;
 }
 
+.swiper-button-next {
+  color: #a8375b;
+}
+.swiper-button-next::after {
+  color: #a8375b;
+}
+.swiper-button-prev {
+  color: #a8375b;
+}
+.swiper-button-prev::after {
+  color: #a8375b;
+}
+
+.swiper-pagination-bullet {
+  color: #fff;
+}
+
 @media screen and (max-width: 768px) {
   .swiper-button-next {
     opacity: 0;
@@ -111,7 +128,7 @@ body {
     pointer-events: none;
     display: none;
   }
-  .swiper-button-pref {
+  .swiper-button-prev {
     opacity: 0;
     pointer-events: none;
     display: none;
