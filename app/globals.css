@@ -100,21 +100,27 @@ body {
   left: 27.5px;
 }
 
-.swiper-button-next {
-  background: #a8375b;
-}
 .swiper-button-next::after {
-  background: #a8375b;
+  color: #a8375b;
 }
-.swiper-button-prev {
-  background: #a8375b;
-}
+
 .swiper-button-prev::after {
-  background: #a8375b;
+  color: #a8375b;
+}
+
+.swiper-pagination-bullet {
+  color: #fff;
+}
+
+.swiper-pagination-bullet::after {
+  color: #fff;
 }
 
 .swiper-pagination-bullet-active {
-  background: #fff;
+  color: #fff;
+}
+.swiper-pagination-bullet-active::after {
+  color: #fff;
 }
 
 @media screen and (max-width: 768px) {
