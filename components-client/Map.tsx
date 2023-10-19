@@ -19,8 +19,9 @@ const Map = () => {
       <div className="w-full h-[600px]" id="mymap">
         <Script
           type="text/javascript"
-          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Adf0279fbe7f81cff691291207df7d554b3e65daa48b6459655ec8899679b7d9f&amp;width=100%25&amp;id=mymap&amp;height=600&amp;lang=ru_RU&amp;scroll=true"
-        />
+          async
+          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Adf0279fbe7f81cff691291207df7d554b3e65daa48b6459655ec8899679b7d9f&amp;width=100%25&amp;height=600&amp;id=mymap&amp;lang=ru_RU&amp;scroll=true"
+        ></Script>
       </div>
     </section>
   );
