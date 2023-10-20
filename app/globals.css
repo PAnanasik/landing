@@ -7,7 +7,8 @@ html {
 }
 
 body {
-  background: #0e0e0e;
+  /* background: #0e0e0e; */
+  background: #2C2916;
   color: #fff;
   overflow-x: hidden;
 }
@@ -101,11 +102,12 @@ body {
 }
 
 .swiper-button-next::after {
-  color: #a8375b;
+  color: #948369;
 }
 
 .swiper-button-prev::after {
-  color: #a8375b;
+  /* color: #a8375b; */
+  color: #948369;
 }
 
 .swiper-pagination-bullet-active {

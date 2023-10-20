@@ -35,7 +35,7 @@ const FaqSlider = () => {
             <p className="">Как и где получить кэшбек?</p>
           </div>
           <div
-            className="bg-primary flex w-full p-4 items-center rounded-t-[8px] rounded-l-[8px] sm:max-w-[500px] mt-[30px] min-h-[40px]
+            className="bg-partner flex w-full p-4 items-center rounded-t-[8px] rounded-l-[8px] sm:max-w-[500px] mt-[30px] min-h-[40px]
                 sm:absolute right-[45px]"
           >
             <p className="">
@@ -59,7 +59,7 @@ const FaqSlider = () => {
             <p className="">Как тратить кэшбек?</p>
           </div>
           <div
-            className="bg-primary flex w-full p-4 items-center rounded-t-[8px] rounded-l-[8px] sm:max-w-[500px] mt-[30px] min-h-[40px]
+            className="bg-partner flex w-full p-4 items-center rounded-t-[8px] rounded-l-[8px] sm:max-w-[500px] mt-[30px] min-h-[40px]
                 sm:absolute right-[45px]"
           >
             <p>В любом магазине партнёра до 99% от общей суммы покупки</p>
@@ -72,7 +72,7 @@ const FaqSlider = () => {
             <p className="">Почему магазин платит кэшбек? Где подвох?</p>
           </div>
           <div
-            className="bg-primary flex w-full p-4 items-center rounded-t-[8px] rounded-l-[8px] sm:max-w-[500px] mt-[30px] min-h-[40px]
+            className="bg-partner flex w-full p-4 items-center rounded-t-[8px] rounded-l-[8px] sm:max-w-[500px] mt-[30px] min-h-[40px]
                 sm:absolute right-[45px]"
           >
             <p className="">
@@ -87,7 +87,7 @@ const FaqSlider = () => {
             <p className="">Сколько я получу?</p>
           </div>
           <div
-            className="bg-primary flex w-full p-4 items-center rounded-t-[8px] rounded-l-[8px] sm:max-w-[500px] mt-[30px] min-h-[40px]
+            className="bg-partner flex w-full p-4 items-center rounded-t-[8px] rounded-l-[8px] sm:max-w-[500px] mt-[30px] min-h-[40px]
                 sm:absolute right-[45px]"
           >
             <p className="">
@@ -103,7 +103,7 @@ const FaqSlider = () => {
             <p className="">Зачем мне кэшбек, если я могу получить скидку?</p>
           </div>
           <div
-            className="bg-primary flex w-full p-4 items-center rounded-t-[8px] rounded-l-[8px] sm:max-w-[500px] mt-[30px] min-h-[40px]
+            className="bg-partner flex w-full p-4 items-center rounded-t-[8px] rounded-l-[8px] sm:max-w-[500px] mt-[30px] min-h-[40px]
                 sm:absolute right-[45px]"
           >
             <p className="">
@@ -118,7 +118,7 @@ const FaqSlider = () => {
             <p className="">Думаю, мне стоит попробовать</p>
           </div>
           <div
-            className="bg-primary flex w-full p-4 items-center rounded-t-[8px] rounded-l-[8px] sm:max-w-[500px] mt-[30px] min-h-[40px]
+            className="bg-partner flex w-full p-4 items-center rounded-t-[8px] rounded-l-[8px] sm:max-w-[500px] mt-[30px] min-h-[40px]
                 sm:absolute right-[45px]"
           >
             <div className="">

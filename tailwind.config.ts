@@ -10,12 +10,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#A8375B",
-        background: "#3F1E26",
-        dark: "#171314",
-        hover: "#B6345E",
-        client: "#FF5675",
-        partner: "#FF1B44",
+        // primary: "#A8375B",
+        primary: "#948369",
+        // background: "#3F1E26",
+        background: "#948369",
+        // dark: "#171314",
+        dark: "#6E3927",
+        // hover: "#B6345E",
+        hover: "#6E3927",
+        // client: "#FF5675",
+        client: "#605C3F",
+        // partner: "#FF1B44",
+        partner: "#35321D",
       },
       screens: {
         xs: "480px",
