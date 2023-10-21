@@ -15,10 +15,14 @@ const Intro = () => {
         className="md:w-1/2 w-full"
       >
         <h2 className="font-semibold ss:text-[48px] xs:text-[32px] text-[28px] sm:leading-[75px] leading-[40px]">
-          Зарабатывайте и привлекайте новых клиентов
+          Привлекайте новых клиентов и{" "}
+          <span className="text-primary">зарабатывайте</span> на бонусах!
         </h2>
-        <p className="mt-[15px] sm:text-[24px] text-[18px]">
-          Используйте партнерский маркетинг с умом!
+        <p className="mt-[25px] sm:text-[32px] text-[18px] font-medium">
+          Мотивируйте покупателей и увеличивайте доход
+        </p>
+        <p className="mt-[15px] sm:text-[18px] text-[18px]">
+          Получите быстрый доступ к клиентам и их покупкам!
         </p>
         <div className="mt-[45px] flex sm:flex-row flex-col items-center gap-[20px]">
           <a

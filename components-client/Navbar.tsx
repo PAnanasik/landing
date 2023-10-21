@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 type NavLinkProps = {
   text: string;
@@ -25,9 +25,25 @@ const NavLink = ({ text, href, isActive }: NavLinkProps) => {
 };
 
 const Navbar = () => {
+  const [scrollTop, setScrollTop] = useState(0);
   const [active, setActive] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollTop(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <div className="w-full fixed top-0 h-[90px] bg-dark flex items-center justify-between z-10">
+    <div
+      className={`w-full fixed top-0 h-[90px] bg-dark flex items-center justify-between duration-300 ease
+      z-10 ${scrollTop > 50 ? "opacity-0" : "opacity-1"}`}
+    >
       <div className="max-w-[1540px] w-full mx-auto px-[20px] flex items-center justify-between">
         <div className="flex items-center gap-[10px]">
           <Image

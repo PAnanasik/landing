@@ -15,7 +15,8 @@ type ClientAdvCardProps = {
 const ClientAdvCard = ({ title, text, image, id }: ClientAdvCardProps) => {
   return (
     <motion.div
-      className="xl:w-[280px] w-full h-[300px] rounded-[20px] bg-primary text-white bg-opacity-[0.2] relative"
+      className="xl:w-[280px] w-full h-[300px] rounded-[20px] bg-primary text-white bg-opacity-[0.2] relative
+      hover:bg-primary ease-linear duration-150"
       variants={fadeIn("left", "spring", 0.25 * id, 1)}
       initial="hidden"
       whileInView="show"
@@ -23,7 +24,7 @@ const ClientAdvCard = ({ title, text, image, id }: ClientAdvCardProps) => {
     >
       <div
         className="bg-primary p-2 rounded-full w-[50px] h-[50px] absolute sm:left-[7px] left-[10px] top-[10px] bg-opacity-[0.3]
-      flex justify-center items-center"
+      flex justify-center items-center ease duration-300 hover:bg-primary"
       >
         <Image
           className="object-fit"
@@ -57,22 +58,22 @@ const Advantages = () => {
       </motion.h2>
       <div className="xl:grid xl:grid-cols-2 grid-cols-1 gap-[20px] h-full">
         <motion.div
-          className="w-full xl:h-full h-[300px] rounded-[20px] bg-dark bg-opacity-[0.8] relative xl:mb-0 mb-[20px]"
+          className="w-full xl:h-full h-[300px] rounded-[20px] bg-opacity-[0.8] relative xl:mb-0 mb-[20px]"
           variants={fadeIn("right", "spring", 0, 1)}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.25 }}
         >
           <Image
-            className="object-cover absolute w-full h-full rounded-[20px]"
-            src="/success.png"
-            alt="profit icon"
+            className="object-cover absolute w-full h-full rounded-[20px] z-[-1]"
+            src="/work-best.png"
+            alt="work image"
             width={500}
             height={600}
             priority
           />
           <div className="sm:absolute sm:left-[30px] sm:bottom-[30px] flex items-center justify-center sm:h-auto h-full">
-            <h2 className="sm:text-[48px] text-[32px] font-medium sm:text-left text-center z-10">
+            <h2 className="sm:text-[48px] text-[32px] font-medium sm:text-left text-center z-9">
               С нами работают <span className="text-primary">лучшие</span>
             </h2>
           </div>

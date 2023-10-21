@@ -101,13 +101,28 @@ body {
   left: 27.5px;
 }
 
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border: 0;
+  border-radius: 50%;
+  background-color: #a8375b;
+  /* background-image: url("https://img.icons8.com/material-outlined/344/average-2.png"); */
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
 .swiper-button-next::after {
-  color: #948369;
+  color: #a8375b;
 }
 
 .swiper-button-prev::after {
-  /* color: #a8375b; */
-  color: #948369;
+  color: #a8375b;
+  /* color: #948369; */
 }
 
 .swiper-pagination-bullet-active {
@@ -154,5 +169,21 @@ body {
   100% {
     opacity: 1;
     transform: translateY(0%);
+  }
+}
+
+.navbar-animation {
+  animation: navbar-animation 0.3s linear;
+  transition: all 0.3s ease;
+}
+
+@keyframes navbar-animation {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    /* transform: translateY(0%); */
   }
 }
