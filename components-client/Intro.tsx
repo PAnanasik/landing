@@ -7,7 +7,7 @@ import { fadeIn } from "@/constants/motion";
 const Intro = () => {
   return (
     <div
-      className="md:h-[700px] h-full md:mt-[90px] mt-[180px] mb-[90px] w-full max-w-[1540px] 
+      className="md:h-[700px] h-full md:mt-[90px] mt-[140px] mb-[90px] w-full max-w-[1540px] 
     px-[20px] mx-auto flex md:flex-row flex-col items-center justify-between"
     >
       <motion.div
@@ -17,13 +17,15 @@ const Intro = () => {
         viewport={{ once: true, amount: 0.25 }}
         className="md:w-1/2 w-full"
       >
-        <h2 className="font-semibold ss:text-[48px] xs:text-[32px] text-[28px] sm:leading-[75px] leading-[40px]">
-          <span className="text-primary">Экономим</span> на ремонте с бонусами <span className="text-primary">RemontPlay</span>
+        <h2 className="font-semibold ss:text-[48px] xs:text-[32px] text-[28px] sm:leading-[75px] ss:leading-[60px] leading-[40px]">
+          <span className="text-primary">Экономим</span> на ремонте с бонусами{" "}
+          <span className="text-primary">RemontPlay</span>
           {/* Тратим <span className="text-primary">намного меньше</span> на ремонт
           вместе! */}
         </h2>
         <p className="mt-[15px] sm:text-[24px] text-[18px]">
-          Завершите ваш ремонт в срок с помощью выгодных предложений от наших магазинов-партнеров
+          Завершите ваш ремонт в срок с помощью выгодных предложений от наших
+          магазинов-партнеров
           {/* Покупайте у наших партнёров и экономьте до 10% с каждой покупки */}
         </p>
         <p className="mt-[15px] sm:text-[24px] text-[18px]">
@@ -59,7 +61,7 @@ const Intro = () => {
         className="h-full flex items-center md:mt-[120px] mt-[20px]"
       >
         <Image
-          className="lg:w-[800px] lg:h-[700px] md:w-[600px] md:h-[600px]"
+          className="lg:w-[800px] lg:h-[700px] md:w-[600px] md:h-[600px] md:block hidden"
           src="/intro-img.svg"
           alt="Relationship image"
           width={790}
