@@ -28,7 +28,7 @@ const StepCard = ({ title, text, id }: StepCardProps) => {
          flex justify-center ease duration-300
          hover:bg-primary hover:bg-opacity-[0.3] mt-[30px]"
         >
-          Подробнее
+          Перейти
         </a>
       )}
     </motion.div>

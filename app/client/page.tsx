@@ -7,8 +7,8 @@ import Staff from "@/components-client/Staff";
 import Faq from "@/components-client/Faq";
 import Footer from "@/components-client/Footer";
 import Map from "@/components-client/Map";
-// import Advantages from "@/components-client/Advantages";
-import AnotherAdvantages from "@/components-client/AnotherAdvantages";
+import Advantages from "@/components-client/Advantages";
+// import AnotherAdvantages from "@/components-client/AnotherAdvantages";
 
 const page = () => {
   return (
@@ -16,7 +16,7 @@ const page = () => {
       <Navbar />
       <Intro />
       <RunningString />
-      <AnotherAdvantages />
+      <Advantages />
       <HowWorks />
       <Partners />
       <Staff />

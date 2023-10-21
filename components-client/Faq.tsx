@@ -4,6 +4,7 @@ import { fadeIn } from "@/constants/motion";
 import { motion } from "framer-motion";
 import FaqSlider from "./FaqSlider";
 import { useEffect, useState } from "react";
+import FaqItems from "./FaqItems";
 
 const Faq = () => {
   const [matches, setMatches] = useState(
@@ -17,9 +18,9 @@ const Faq = () => {
       .addEventListener("change", (event) => setMatches(event.matches));
   }, []);
   return (
-    <section className="max-w-[1240px] w-full mx-auto mt-[90px] px-[20px]">
+    <section>
       <motion.h2
-        className="mb-[60px]"
+        className="mb-[60px] max-w-[1240px] w-full mx-auto mt-[90px] px-[20px]"
         id="title"
         variants={fadeIn("right", "spring", 0, 1)}
         initial="hidden"
@@ -36,7 +37,9 @@ const Faq = () => {
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
       >
-        <FaqSlider />
+
+        <FaqItems />
+        {/* <FaqSlider /> */}
       </motion.div>
     </section>
   );

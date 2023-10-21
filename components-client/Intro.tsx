@@ -18,11 +18,19 @@ const Intro = () => {
         className="md:w-1/2 w-full"
       >
         <h2 className="font-semibold ss:text-[48px] xs:text-[32px] text-[28px] sm:leading-[75px] leading-[40px]">
-          Тратим <span className="text-primary">намного меньше</span> на ремонт
-          вместе!
+          <span className="text-primary">Экономим</span> на ремонте с бонусами <span className="text-primary">RemontPlay</span>
+          {/* Тратим <span className="text-primary">намного меньше</span> на ремонт
+          вместе! */}
         </h2>
         <p className="mt-[15px] sm:text-[24px] text-[18px]">
-          Покупайте у наших партнёров и экономьте до 10% с каждой покупки
+          Завершите ваш ремонт в срок с помощью выгодных предложений от наших магазинов-партнеров
+          {/* Покупайте у наших партнёров и экономьте до 10% с каждой покупки */}
+        </p>
+        <p className="mt-[15px] sm:text-[24px] text-[18px]">
+          Получайте до 10% процентов с каждой покупки
+          {/* Покупайте у наших партнёров и экономьте до 10% с каждой покупки
+
+           */}
         </p>
         <div className="mt-[45px] flex sm:flex-row flex-col items-center gap-[20px]">
           <a
@@ -52,7 +60,7 @@ const Intro = () => {
       >
         <Image
           className="lg:w-[800px] lg:h-[700px] md:w-[600px] md:h-[600px]"
-          src="/intro-right-side.svg"
+          src="/intro-img.svg"
           alt="Relationship image"
           width={790}
           height={700}

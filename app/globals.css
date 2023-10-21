@@ -7,8 +7,8 @@ html {
 }
 
 body {
-  /* background: #0e0e0e; */
-  background: #2C2916;
+  background: #0e0e0e;
+  /* background: #2C2916; */
   color: #fff;
   overflow-x: hidden;
 }
@@ -134,5 +134,25 @@ body {
     opacity: 0;
     pointer-events: none;
     display: none;
+  }
+}
+
+.arrow-onclick {
+  transform: rotate(180deg);
+}
+
+.text-animation {
+  animation: text-move 0.1s linear;
+  transition: all 0.1s ease;
+}
+
+@keyframes text-move {
+  0% {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
   }
 }
