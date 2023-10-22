@@ -2,21 +2,19 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "@/constants/motion";
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 
 const HowMuch = () => {
   const [render, setRender] = useState(0);
-  const rangeCashback = useRef(null);
-  const valueBlockCashback = useRef(null);
-  const rangeCash = useRef(null);
-  const valueBlockCash = useRef(null);
-  const valueBlockEconomy = useRef(null);
-  //   const inputrange = useRef(null);
-  //   const input = useRef(null);
+  const rangeCashback = useRef<HTMLInputElement | null>(null);
+  const valueBlockCashback = useRef<HTMLDivElement | null>(null);
+  const rangeCash = useRef<HTMLInputElement | null>(null);
+  const valueBlockCash = useRef<HTMLDivElement | null>(null);
+  const valueBlockEconomy = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    function calculateBg() {
-      var value = ((this.value - this.min) / (this.max - this.min)) * 100;
+    function calculateBg(this: any) {
+      var value: number =
+        ((this.value - this.min) / (this.max - this.min)) * 100;
       this.style.background =
         "linear-gradient(to right, #A8375B 0%, #A8375B " +
         value +
@@ -38,7 +36,7 @@ const HowMuch = () => {
 
   function handleChangeCashback() {
     setRender(parseInt(rangeCashback.current!.value));
-    if (rangeCashback.current!.value != 0) {
+    if (parseInt(rangeCashback.current!.value) != 0) {
       valueBlockCashback.current!.innerHTML = `${
         rangeCashback.current!.value
       } %`;
@@ -49,12 +47,12 @@ const HowMuch = () => {
 
   function handleChangeCash() {
     setRender(parseInt(rangeCash.current!.value));
-    if (rangeCash.current!.value != 0) {
+    if (parseInt(rangeCash.current!.value) != 0) {
       valueBlockCash.current!.innerHTML = `${
-        rangeCash.current!.value * 1000
+        parseInt(rangeCash.current!.value) * 1000
       } р`;
     } else {
-      valueBlockCash.current!.innerHTML = 5000;
+      valueBlockCash.current!.innerHTML = "5000";
     }
   }
 
@@ -77,7 +75,7 @@ const HowMuch = () => {
             <div>
               <div
                 className="h-[40px] bg-primary bg-opacity-[0.4] rounded-[8px] p-4 flex items-center relative"
-                ref={valueBlockCashback}
+                ref={(node) => (valueBlockCashback.current = node)}
               >
                 5%
               </div>
@@ -89,7 +87,7 @@ const HowMuch = () => {
                 defaultValue={"0"}
                 min="5"
                 max="15"
-                ref={rangeCashback}
+                ref={(node) => (rangeCashback.current = node)}
                 onChange={handleChangeCashback}
               />
             </div>
@@ -99,7 +97,7 @@ const HowMuch = () => {
             <div>
               <div
                 className="h-[40px] bg-primary bg-opacity-[0.4] rounded-[8px] p-4 flex items-center relative"
-                ref={valueBlockCash}
+                ref={(node) => (valueBlockCash.current = node)}
               >
                 5000р
               </div>
@@ -111,7 +109,7 @@ const HowMuch = () => {
                 defaultValue={"0"}
                 min="5"
                 max="1000"
-                ref={rangeCash}
+                ref={(node) => (rangeCash.current = node)}
                 onChange={handleChangeCash}
               />
             </div>
@@ -119,7 +117,7 @@ const HowMuch = () => {
           <div className="mt-[30px]">
             <p>Ваша примерная экономия</p>
             <h2
-              ref={valueBlockEconomy}
+              ref={(node) => (valueBlockEconomy.current = node)}
               className="text-[32px] font-semibold"
             ></h2>
           </div>
