@@ -27,14 +27,14 @@ const Community = () => {
         viewport={{ once: true, amount: 0.25 }}
       >
         <div className="w-full h-[100px] flex items-center md:justify-center px-[20px] border-primary border-[1px] border-solid border-opacity-[0.5] rounded-[20px]">
-          <label className="relative inline-flex items-center cursor-pointer">
+          <label className="relative inline-flex cursor-pointer">
             <input
               type="checkbox"
               value=""
               className="sr-only peer"
               onClick={() => setActive(!active)}
             />
-            <div className="w-11 h-6 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-[#3F1E26] rounded-full peer bg-gray-400 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all border-gray-600 peer-checked:bg-[#948369]"></div>
+            <div className="w-11 h-6 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-[#3F1E26] rounded-full peer bg-gray-400 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all border-gray-600 peer-checked:bg-primary"></div>
             <span
               className={`${
                 active
