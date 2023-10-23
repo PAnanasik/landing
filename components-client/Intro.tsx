@@ -7,15 +7,15 @@ import { fadeIn } from "@/constants/motion";
 const Intro = () => {
   return (
     <div
-      className="md:h-[700px] h-full md:mt-[90px] mt-[140px] mb-[90px] w-full max-w-[1540px] 
-    px-[20px] mx-auto flex md:flex-row flex-col items-center justify-between"
+      className="lg:h-[700px] h-full lg:mt-[90px] mt-[140px] mb-[90px] w-full max-w-[1540px] 
+    px-[20px] mx-auto flex items-center justify-between"
     >
       <motion.div
         variants={fadeIn("right", "spring", 0, 1)}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
-        className="md:w-1/2 w-full"
+        className="lg:w-1/2 w-full"
       >
         <h2 className="font-semibold ss:text-[48px] xs:text-[32px] text-[28px] sm:leading-[75px] ss:leading-[60px] leading-[40px]">
           <span className="text-primary">Экономим</span> на ремонте с бонусами{" "}
@@ -60,14 +60,26 @@ const Intro = () => {
         viewport={{ once: true, amount: 0.25 }}
         className="h-full flex items-center md:mt-[120px] mt-[20px]"
       >
-        <Image
-          className="lg:w-[800px] lg:h-[700px] md:w-[600px] md:h-[600px] md:block hidden"
-          src="/intro-img.svg"
-          alt="Relationship image"
-          width={790}
-          height={700}
-          priority
-        />
+        <div className="relative w-full h-full lg:block hidden">
+          <Image
+            className="w-full h-full intro-animation relative"
+            src="/rounded-text.svg"
+            alt="Relationship image"
+            width={790}
+            height={700}
+            priority
+          />
+          <div className="w-[450px] h-[450px] bg-primary bg-opacity-[0.1] rounded-full absolute child flex items-center justify-center">
+            <Image
+              className="w-full h-full absolute object-cover rounded-full"
+              src="/client.svg"
+              alt="Relationship image"
+              width={450}
+              height={450}
+              priority
+            />
+          </div>
+        </div>
       </motion.div>
     </div>
   );
