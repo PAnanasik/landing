@@ -5,13 +5,13 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 type StaffCardProps = {
+  image: string;
   name: string;
   prof: string;
-  desc: string;
   id: number;
 };
 
-const StaffCard = ({ name, prof, desc, id }: StaffCardProps) => {
+const StaffCard = ({ name, prof, image, id }: StaffCardProps) => {
   return (
     <motion.div
       className="flex flex-col w-full"
@@ -20,20 +20,19 @@ const StaffCard = ({ name, prof, desc, id }: StaffCardProps) => {
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
     >
-      <div className="bg-black bg-opacity-[0.3] rounded-[20px] h-[300px] w-full relative">
-        {/* <Image
+      <div className="bg-black bg-opacity-[0.3] rounded-[20px] h-[320px] w-full relative">
+        <Image
           className="bg-opacity-[0.3] absolute h-full object-cover rounded-[20px] z-[-10] w-full"
-          src="/mnogoznaal.jpg"
+          src={`${image}`}
           alt="community section image"
           width={700}
           height={400}
-        /> */}
+        />
         <div className="absolute bottom-[20px] left-[20px]">
           <h2 className="text-[18px] font-medium">{name}</h2>
           <p className="text-gray-200">{prof}</p>
         </div>
       </div>
-      {/* <p className="p-4 bg-primary bg-opacity-[0.2] rounded-b-[20px]">{desc}</p> */}
     </motion.div>
   );
 };

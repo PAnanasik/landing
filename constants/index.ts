@@ -171,14 +171,17 @@ export const slidesArray = [
 
 export const staffArray = [
   {
+    image: "/staff2.png",
     name: "Бутаенко Анастасия",
     prof: "Старший менеджер Салона ESTET",
   },
   {
+    image: "/staff1.png",
     name: "Сорокина Людмила",
     prof: "Менеджер Салона ESTET, ведущий менеджер партнерской программы и работе с дизайнерами интерьера",
   },
   {
+    image: "/staff3.png",
     name: "Валерия Инзык",
     prof: "Руководитель Салона дверей ESTET (г. Анапа)",
   },
