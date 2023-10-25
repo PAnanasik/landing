@@ -118,22 +118,26 @@ export const moreAdvantages = [
 export const clientAdvantages = [
   {
     image: "profit.png",
+    bg: "profit-bg.png",
     title: "Выгодные предложения",
     text: "Регулярные акции и скидки помогут по-настоящему сэкономить на ремонте",
   },
   {
     image: "help.png",
+    bg: "fasthelp-bg.png",
     title: "Оперативная помощь",
     text: "Будьте уверены - наша поддержка решит все ваши вопросы быстро и вовремя",
   },
   {
     image: "cashback.png",
+    bg: "cashback-bg.png",
     title: "Кэшбэк до 15%",
     text: "У наших партнёров вы сможете получить до 15%. Мы предлагаем лучшие условия в Анапе",
   },
   {
-    image: "cozy.png",
-    title: "Комфорт",
+    image: "trust.png",
+    bg: "trust-bg.png",
+    title: "Доверие",
     text: "Партнёры проходят несколько этапов проверки, чтобы вам предлагать свои услуги",
   },
 ];

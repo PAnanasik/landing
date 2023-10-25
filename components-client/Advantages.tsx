@@ -10,18 +10,26 @@ type ClientAdvCardProps = {
   title: string;
   text: string;
   image: string;
+  bg: string;
 };
 
-const ClientAdvCard = ({ title, text, image, id }: ClientAdvCardProps) => {
+const ClientAdvCard = ({ title, text, image, bg, id }: ClientAdvCardProps) => {
   return (
     <motion.div
-      className="xl:w-[280px] w-full h-[300px] rounded-[20px] bg-primary text-white bg-opacity-[0.2] relative
-      hover:bg-primary ease-linear duration-150"
+      className="xl:w-[280px] w-full h-[300px] rounded-[20px] bg-black text-white bg-opacity-[0.4] relative"
       variants={fadeIn("left", "spring", 0.25 * id, 1)}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
     >
+      <Image
+        className="object-cover absolute w-full h-full rounded-[20px]"
+        src={`/${bg}`}
+        alt="profit icon"
+        width={300}
+        height={300}
+        priority
+      />
       <div
         className="bg-primary p-2 rounded-full w-[50px] h-[50px] absolute sm:left-[7px] left-[10px] top-[10px] bg-opacity-[0.3]
       flex justify-center items-center ease duration-300 hover:bg-primary"
@@ -78,14 +86,7 @@ const Advantages = () => {
             </h2>
           </div>
         </motion.div>
-        <div
-          className="w-full sm:grid sm:grid-cols-2 gap-[20px] [&>*:nth-child(1)]:border-primary 
-          [&>*:nth-child(1)]:border-solid [&>*:nth-child(1)]:border-[1px] [&>*:nth-child(1)]:border-opacity-[0.5]
-          [&>*:nth-child(4)]:border-primary [&>*:nth-child(4)]:border-solid [&>*:nth-child(4)]:border-[1px] 
-          [&>*:nth-child(4)]:border-opacity-[0.5]
-          [&>*:nth-child(1)]:bg-opacity-[0.1] [&>*:nth-child(4)]:bg-opacity-[0.1]
-          flex flex-col"
-        >
+        <div className="w-full sm:grid sm:grid-cols-2 gap-[20px] flex flex-col">
           {clientAdvantages.map((advantage, id) => (
             <ClientAdvCard key={advantage.title} id={id} {...advantage} />
           ))}

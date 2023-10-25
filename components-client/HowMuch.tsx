@@ -31,7 +31,7 @@ const HowMuch = () => {
     valueBlockEconomy.current!.innerHTML = `${Math.floor(
       parseInt(valueBlockCash.current!.innerHTML) *
         (parseInt(valueBlockCashback.current!.innerHTML) * 0.01)
-    )}Р`;
+    ).toLocaleString()}Р`;
   }, [render]);
 
   function handleChangeCashback() {
@@ -77,39 +77,39 @@ const HowMuch = () => {
                 className="h-[40px] bg-primary bg-opacity-[0.4] rounded-[8px] p-4 flex items-center relative"
                 ref={(node) => (valueBlockCashback.current = node)}
               >
-                5%
+                15%
               </div>
               <input
                 type="range"
                 id="range-inp"
                 className="transparent h-[1px] w-full cursor-pointer
               appearance-none border-transparent bg-primary bg-opacity-[0.4]"
-                defaultValue={"0"}
+                defaultValue={"15"}
                 min="5"
                 max="15"
-                ref={(node) => (rangeCashback.current = node)}
+                ref={rangeCashback}
                 onChange={handleChangeCashback}
               />
             </div>
           </div>
           <div className="flex flex-col mt-[30px]">
-            <p className="mb-[2px]">Количество денег</p>
+            <p className="mb-[2px]">Стоимость</p>
             <div>
               <div
                 className="h-[40px] bg-primary bg-opacity-[0.4] rounded-[8px] p-4 flex items-center relative"
-                ref={(node) => (valueBlockCash.current = node)}
+                ref={valueBlockCash}
               >
-                5000р
+                500000р
               </div>
               <input
                 type="range"
                 id="range-inp-cash"
                 className="transparent h-[1px] w-full cursor-pointer
               appearance-none border-transparent bg-primary bg-opacity-[0.4]"
-                defaultValue={"0"}
+                defaultValue={"500"}
                 min="5"
                 max="1000"
-                ref={(node) => (rangeCash.current = node)}
+                ref={rangeCash}
                 onChange={handleChangeCash}
               />
             </div>
@@ -117,7 +117,7 @@ const HowMuch = () => {
           <div className="mt-[30px]">
             <p>Ваша примерная экономия</p>
             <h2
-              ref={(node) => (valueBlockEconomy.current = node)}
+              ref={valueBlockEconomy}
               className="text-[32px] font-semibold"
             ></h2>
           </div>
