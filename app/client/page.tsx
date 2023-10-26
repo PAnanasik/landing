@@ -20,7 +20,7 @@ const page = () => {
       <Advantages />
       <HowMuch />
       <HowWorks />
-      <Partners />
+      {/* <Partners /> */}
       <Staff />
       <Faq />
       <Map />
