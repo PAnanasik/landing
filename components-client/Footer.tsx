@@ -13,6 +13,7 @@ const Footer = () => {
           <a href="https://remont-play.ru/" target="_blank">
             Приложение
           </a>
+          <p className="mt-[20px]">Images by storyset. Freepik</p>
         </div>
         <div className="h-full">
           <h2 className="text-[24px]">Контакты</h2>

@@ -50,11 +50,11 @@ const Navbar = () => {
             className="object-cover"
             src="/RemontPlay-logo.svg"
             alt="Remont play logo"
-            width={40}
-            height={40}
+            width={140}
+            height={140}
             priority
           />
-          <p className="font-medium">Remont play</p>
+          {/* <p className="font-medium">Remont play</p> */}
         </div>
         <div className="sm:flex hidden gap-[20px]">
           <NavLink text={"Клиенту"} href={"/client"} isActive={false} />

@@ -9,6 +9,7 @@ import Navbar from "@/components-partner/Navbar";
 import RunningString from "@/components-partner/RunningString";
 import Footer from "@/components-partner/Footer";
 import Map from "@/components-partner/Map";
+import WhyUs from "@/components-partner/WhyUs";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Navbar />
       <Intro />
       <RunningString />
+      <WhyUs />
       <Advantages />
       <Facts />
       <HowWorks />
