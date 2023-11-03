@@ -54,13 +54,13 @@ const Facts = () => {
         viewport={{ once: true, amount: 0.25 }}
       >
         <Image
-          className="bg-primary rounded-[8px] bg-opacity-[0.3] md:w-[800px] w-1/2 h-[300px]"
+          className="bg-primary rounded-[8px] bg-opacity-[0.3] md:w-[800px] w-full h-[300px]"
           src="/RemontPlay-logo.svg"
           alt="Remont play logo"
           width={800}
           height={350}
         />
-        <div className="w-1/2">
+        <div>
           <h2 className="md:text-[32px] text-[24px] font-medium text-primary">
             Попробуйте!
           </h2>
