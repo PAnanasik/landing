@@ -22,7 +22,7 @@ const StepCard = ({ title, text, id }: StepCardProps) => {
       <p className="text-[18px]">{text}</p>
       {id === 0 && (
         <a
-          href="#"
+          href="https://remont-play.ru"
           className="p-2 border-primary border-solid border-[1px] 
          border-opacity-[0.5] text-primary rounded-[8px] font-medium text-[18px] w-full 
          flex justify-center ease duration-300
