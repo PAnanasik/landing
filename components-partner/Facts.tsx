@@ -54,13 +54,13 @@ const Facts = () => {
         viewport={{ once: true, amount: 0.25 }}
       >
         <Image
-          className="bg-primary rounded-[8px] bg-opacity-[0.3] md:w-[800px] w-full h-[300px]"
+          className="bg-primary rounded-[8px] bg-opacity-[0.3] md:w-[800px] w-1/2 h-[300px]"
           src="/RemontPlay-logo.svg"
           alt="Remont play logo"
           width={800}
           height={350}
         />
-        <div>
+        <div className="w-1/2">
           <h2 className="md:text-[32px] text-[24px] font-medium text-primary">
             Попробуйте!
           </h2>
@@ -69,7 +69,7 @@ const Facts = () => {
             извлечь максимальную выгоду за кратчайший период
           </p>
           <a
-            href="#"
+            href="https://remont-play.ru"
             className="p-2 bg-primary rounded-[8px] font-medium text-[16px] max-w-[300px] w-full mt-[30px] flex justify-center
             ease duration-300 hover:bg-hover hover:font-semibold"
           >
