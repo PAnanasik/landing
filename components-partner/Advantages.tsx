@@ -79,7 +79,7 @@ const Advantages = () => {
               от 5-15%.
             </p>
             <a
-              href="#"
+              href="https://remont-play.ru"
               className="p-2 bg-primary rounded-[8px] font-medium text-[16px] max-w-[300px] w-full mt-[30px] flex justify-center
               ease duration-300 hover:bg-hover hover:font-semibold"
             >
