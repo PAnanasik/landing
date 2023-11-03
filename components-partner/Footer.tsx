@@ -7,7 +7,7 @@ const Footer = () => {
       >
         <div className="flex flex-col h-full">
           <h2 className="text-[32px]">RemontPlay</h2>
-          <a href="http://localhost:3000/client-offer.pdf" target="_blank">
+          <a href="https://remont-play.netlify.app/client-offer.pdf" target="_blank">
             Оферта
           </a>
           <a href="https://remont-play.ru/" target="_blank">
