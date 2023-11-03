@@ -25,7 +25,7 @@ const Info = () => {
             </div>
           </div>
           <a
-            href="#"
+            href="https://remont-play.ru"
             className="sm:p-4 p-2 bg-primary rounded-[8px] font-medium text-[16px] max-w-[300px] 
             w-full sm:mt-[20px] mt-[30px] flex justify-center 
             ease duration-300 hover:bg-hover hover:font-semibold"
